@@ -17,53 +17,53 @@ jobs:
     strategy:
       matrix:
         build-type: [sweet-pixelos, sweet-miui, sweet-clang, mi89x7-community, a9y18qlte]
-        ksu-type: [zako, zako-susfs]
+        ksu-type: [ksunext, ksunext-susfs]
         bbg-type: [bbg, none]
         exclude:
           - build-type: a9y18qlte
-            ksu-type: zako-susfs
+            ksu-type: ksunext-susfs
             bbg-type: bbg
           - build-type: a9y18qlte
-            ksu-type: zako-susfs
+            ksu-type: ksunext-susfs
             bbg-type: none
           - build-type: a9y18qlte
-            ksu-type: zako
+            ksu-type: ksunext
             bbg-type: bbg
           - build-type: sweet-pixelos
-            ksu-type: zako
+            ksu-type: ksunext
             bbg-type: none
           - build-type: sweet-pixelos
-            ksu-type: zako
+            ksu-type: ksunext
             bbg-type: bbg
           - build-type: sweet-pixelos
-            ksu-type: zako-susfs
+            ksu-type: ksunext-susfs
             bbg-type: none
           - build-type: sweet-miui
-            ksu-type: zako
+            ksu-type: ksunext
             bbg-type: none
           - build-type: sweet-miui
-            ksu-type: zako
+            ksu-type: ksunext
             bbg-type: bbg
           - build-type: sweet-miui
-            ksu-type: zako-susfs
+            ksu-type: ksunext-susfs
             bbg-type: none
           - build-type: sweet-clang
-            ksu-type: zako
+            ksu-type: ksunext
             bbg-type: none
           - build-type: sweet-clang
-            ksu-type: zako
+            ksu-type: ksunext
             bbg-type: bbg
           - build-type: sweet-clang
-            ksu-type: zako-susfs
+            ksu-type: ksunext-susfs
             bbg-type: none
           - build-type: mi89x7-community
-            ksu-type: zako
+            ksu-type: ksunext
             bbg-type: none
           - build-type: mi89x7-community
-            ksu-type: zako
+            ksu-type: ksunext
             bbg-type: bbg
           - build-type: mi89x7-community
-            ksu-type: zako-susfs
+            ksu-type: ksunext-susfs
             bbg-type: none
 
     steps:
@@ -303,7 +303,7 @@ jobs:
           body: |
             > [!IMPORTANT]   
             > - This kernel only be used for playtesting purposes. Do NOT report bugs to the original author.   
-            > - This kernel already includes ReSukiSU. Also SUSFS and Baseband Guard too, in exception of a9y18qlte.    
+            > - This kernel already includes KernelSU Next. Also SUSFS and Baseband Guard too, in exception of a9y18qlte.    
             > - The Kernels that built with LTO enabled are sweet-miui, sweet-clang and mi89x7-community.
 
             > [!CAUTION]   

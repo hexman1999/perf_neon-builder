@@ -17,7 +17,7 @@ jobs:
     strategy:
       matrix:
         build-type: [sweet, davinci, tucana, violet, ginkgo, laurel_sprout, alioth, lmi, munch, mi89x7]
-        ksu-type: [zako, zako-susfs, none]
+        ksu-type: [ksunext, ksunext-susfs, none]
         bbg-type: [bbg]
 
     steps:
@@ -185,9 +185,9 @@ jobs:
 
       - name: Pack kernel with AnyKernel3
         run: |
-          if [[ "${{ matrix.ksu-type }}" == "zako" ]]; then
+          if [[ "${{ matrix.ksu-type }}" == "ksunext" ]]; then
             export KSUTYPE="normal"
-          elif [[ "${{ matrix.ksu-type }}" == "zako-susfs" ]]; then
+          elif [[ "${{ matrix.ksu-type }}" == "ksunext-susfs" ]]; then
             export KSUTYPE="susfs"
           elif [[ "${{ matrix.ksu-type }}" == "none" ]]; then
             export KSUTYPE="noksu"
@@ -237,12 +237,12 @@ jobs:
           body: |
             > [!NOTE]   
             > - The kernel supports Android 11 to 16.   
-            > - ReSukiSU latest manager can be found in [here](https://resukisu.github.io/guide/install.html#Get-manager).    
+            > - KernelSU-Next latest manager can be found in [here](https://github.com/KernelSU-Next/KernelSU-Next/releases).    
                
             > [!IMPORTANT]
-            > - Normal build contains ReSukiSU + Baseband Guard (Recommended).   
-            > - SUSFS build contains ReSukiSU + SUSFS + Baseband Guard.   
-            > - No-KSU build does not contain ReSukiSU. But it does contain Baseband Guard.   
+            > - Normal build contains KernelSU Next + Baseband Guard (Recommended).   
+            > - SUSFS build contains KernelSU Next + SUSFS + Baseband Guard.   
+            > - No-KSU build does not contain KernelSU Next. But it does contain Baseband Guard.   
 
             > [!CAUTION]   
             > - Always backup your boot & dtbo image first before proceeding!   

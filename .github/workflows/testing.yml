@@ -15,44 +15,44 @@ jobs:
     strategy:
       matrix:
         build-type: [sweet-clang]
-        ksu-type: [zako, zako-susfs]
+        ksu-type: [ksunext, ksunext-susfs]
         bbg-type: [bbg, none]
         exclude:
           - build-type: a9y18qlte
-            ksu-type: zako-susfs
+            ksu-type: ksunext-susfs
             bbg-type: bbg
           - build-type: a9y18qlte
-            ksu-type: zako-susfs
+            ksu-type: ksunext-susfs
             bbg-type: none
           - build-type: a9y18qlte
-            ksu-type: zako
+            ksu-type: ksunext
             bbg-type: bbg
           - build-type: sweet-pixelos
-            ksu-type: zako
+            ksu-type: ksunext
             bbg-type: none
           - build-type: sweet-pixelos
-            ksu-type: zako
+            ksu-type: ksunext
             bbg-type: bbg
           - build-type: sweet-pixelos
-            ksu-type: zako-susfs
+            ksu-type: ksunext-susfs
             bbg-type: none
           - build-type: sweet-miui
-            ksu-type: zako
+            ksu-type: ksunext
             bbg-type: none
           - build-type: sweet-miui
-            ksu-type: zako
+            ksu-type: ksunext
             bbg-type: bbg
           - build-type: sweet-miui
-            ksu-type: zako-susfs
+            ksu-type: ksunext-susfs
             bbg-type: none
           - build-type: mi89x7-community
-            ksu-type: zako
+            ksu-type: ksunext
             bbg-type: none
           - build-type: mi89x7-community
-            ksu-type: zako
+            ksu-type: ksunext
             bbg-type: bbg
           - build-type: mi89x7-community
-            ksu-type: zako-susfs
+            ksu-type: ksunext-susfs
             bbg-type: none
 
     steps:
